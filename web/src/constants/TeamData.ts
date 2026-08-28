@@ -69,7 +69,7 @@ const TeamData: TeamMember[] = [
         name: "Ayla Derrick",
         title: "Chief Operating Officer",
         highlight:
-            "Founder and creative director at Cave Bear Games, Cave Bear Collective.",
+            "Founder and creative director at Cave Bear Games and Cave Bear Collective.",
         member_type: "LEAD",
         department: "OPERATIONS",
         status: "ACTIVE",

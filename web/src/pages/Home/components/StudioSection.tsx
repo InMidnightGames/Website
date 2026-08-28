@@ -27,10 +27,10 @@ export default function StudioSection() {
 
                         We believe numerical balance should support good mechanics, not substitute for them. By intentionally
                         providing multiple avenues of <span className={highlightText}>skill expression</span>, we aim to create matches where victory is never out of reach.
-                        Competition also carries more weight when players care about what they are fighting for.
 
                         <br /><br />
 
+                        Competition also carries more weight when players care about what they are fighting for.
                         We build worlds and characters worth protecting, so every test of skill has something human at stake.
                     </p>
                 </div>
