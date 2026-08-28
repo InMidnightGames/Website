@@ -31,7 +31,7 @@ export default function StudioSection() {
 
                         <br /><br />
 
-                        We build worlds and characters worth protecting, so every test of skill has something <br/> human at stake.
+                        We build worlds and characters worth protecting, so every test of skill has something human at stake.
                     </p>
                 </div>
             </div>
