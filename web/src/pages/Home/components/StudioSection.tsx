@@ -1,9 +1,10 @@
 import studio_key_art from "../../../assets/media/studio_key_art.png"
+import TeamData from "../../../constants/TeamData.ts";
 export default function StudioSection() {
     const highlightText  = "text-[#EB4335]";
     const textColor = "";
     const headerColor = "";
-
+    const memberCount = TeamData.map((member)=>member.status === "ACTIVE" && member.member_type !+ "ADVISOR").length;
     return (
         <section className="mb-10 md:mb-0">
             <div className="h-200 w-screen flex flex-col items-center mx-auto ">
@@ -18,7 +19,7 @@ export default function StudioSection() {
                     <h3 className={"mt-0 font-bold italic text-3xl text-center " + headerColor}>OUR STUDIO</h3>
                     <p className={"text-center  max-w-120 mt-1 text-lg " + textColor}>
                         <span className={highlightText}> In Midnight Games</span> is a gameplay-first independent studio founded by combat designer and high-level
-                        competitive player <span className={highlightText}>Tanner Liou</span>. Our 16-person team brings experience spanning indie, AAA production,
+                        competitive player <span className={highlightText}>Tanner Liou</span>. Our {memberCount}-person team brings experience spanning indie, AAA production,
                         and large-scale online development, supported by seven attached industry advisors. We build games by
                         and for people who love competition: approachable, difficult to master, and with the depth necessary
                         to reward study, execution, and teamwork.

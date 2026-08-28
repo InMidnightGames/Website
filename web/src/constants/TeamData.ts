@@ -51,6 +51,9 @@ const createMember = (
         ...member,
         pic,
     });
+
+
+
 const TeamData: TeamMember[] = [
     createMember({
         name: "Tanner Liou",
@@ -81,6 +84,15 @@ const TeamData: TeamMember[] = [
         department: "OPERATIONS",
         status: "ACTIVE",
     }, ayla),
+
+    createMember({
+        name:"Sofia Ayad",
+        title: "Marketing Director",
+        highlight: "Marketing, communications, and events director at Insomniac Events, Something in Action, Connect, and Cave Bear Games.",
+        department: "Marketing",
+        member_type: "LEAD",
+        status:"ACTIVE"
+    }, sofia),
 
     createMember({
         name: "Tradd Thompson",
@@ -221,13 +233,6 @@ const TeamData: TeamMember[] = [
         status: "ACTIVE",
     }, vall),
 
-    createMember({
-        name:"Sofia Ayad",
-        title: "Marketing Director",
-        highlight: "Marketing, communications, and events director at Insomniac Events, Something in Action, Connect, and Cave Bear Games.",
-        department: "Marketing",
-        member_type: "LEAD",
-        status:"ACTIVE"
-    }, sofia)
+
 ];
 export default TeamData;
