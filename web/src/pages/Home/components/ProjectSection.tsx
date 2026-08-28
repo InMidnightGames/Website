@@ -14,7 +14,7 @@ export default function ProjectSection() {
 
                 <div className="flex flex-col ">
                     <h3 className={"mt-0 font-bold italic text-3xl  " + headerColor}>OUR PROJECT</h3>
-                    <p className={"  max-w-85 mt-1 text-sm " + textColor}>
+                    <p className={"  max-w-85 mt-1 text-md " + textColor}>
 
 
                         <span className={highlightText}>Project CORE </span> is a third-person

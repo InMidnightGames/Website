@@ -6,7 +6,7 @@ export default function StudioSection() {
 
     return (
         <section className="">
-            <div className="h-158 w-screen flex flex-col items-center mx-auto ">
+            <div className="h-200 w-screen flex flex-col items-center mx-auto ">
                 <div className="flex justify-center">
                 <img src={studio_key_art} className="inline-flex justify-center mt-20 items-center h-50"/>
                 {/*<span className="inline-flex justify-center items-center size-50 border border-2 border-line-100 mt-20 text-foreground">*/}
@@ -16,7 +16,7 @@ export default function StudioSection() {
 
                 <div className="flex flex-col items-center text-center font-caslon ">
                     <h3 className={"mt-0 font-bold italic text-3xl text-center " + headerColor}>OUR STUDIO</h3>
-                    <p className={"text-center  max-w-120 mt-1 text-sm " + textColor}>
+                    <p className={"text-center  max-w-120 mt-1 text-lg " + textColor}>
                         <span className={highlightText}> In Midnight Games</span> is a gameplay-first independent studio founded by combat designer and high-level
                         competitive player <span className={highlightText}>Tanner Liou</span>. Our 16-person team brings experience spanning indie, AAA production,
                         and large-scale online development, supported by seven attached industry advisors. We build games by

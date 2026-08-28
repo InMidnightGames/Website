@@ -12,7 +12,7 @@ export default function ProfileCard({ member, nameColor, roleColor }: ProfileCar
             <img src={member.pic} alt={"Picture of " + member.name}  className="size-40"/>
             <h3 className={nameColor+ " font-bold text-2xl"}>{member.name}</h3>
             <h6 className={roleColor + " font-light italic text-md"}>{member.title}</h6>
-            <p className={"text-sm mt-2"}>{member.highlight}</p>
+            <p className={"text-md mt-2"}>{member.highlight}</p>
         </div>
     );
 }

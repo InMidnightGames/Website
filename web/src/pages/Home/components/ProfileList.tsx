@@ -26,7 +26,7 @@ export default function ProfileList({ cols, filter, nameColor, roleColor }: Prof
 
     return (
         <div
-            className={`grid ${colStyle} w-200 min-h-screen flex justify-center items-center`}
+            className={`grid  md:${colStyle} gap-5 w-200 min-h-screen flex justify-center items-center`}
         >
             {filteredContent.map((member, index) => {
                 const isLastRow = index >= filteredContent.length - remainder;
