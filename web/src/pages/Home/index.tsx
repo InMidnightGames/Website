@@ -6,7 +6,7 @@ import TeamSection from "./components/TeamSection.tsx";
 
 export default function Home() {
     return (
-        <main>
+        <main className="scroll-smooth">
             <HeroBanner/>
             <StudioSection/>
             <ProjectSection/>

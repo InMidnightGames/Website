@@ -5,16 +5,16 @@ export default function ProjectSection() {
 
     return (
         <section className=" font-caslon">
-            <div className="h-120 w-screen grid grid-cols-2  items-center max-w-300 mx-auto px-5">
+            <div className="h-170 md:h-120 w-screen flex flex-col  md:grid md:grid-cols-2  items-center max-w-300 mx-auto px-5">
                 <div className="flex justify-center">
-                    <span className="inline-flex justify-center items-center size-100 border border-line-100 text-foreground">
+                    <span className="inline-flex justify-center items-center size-50 md:size-100 border border-line-100 text-foreground">
                         {/* SVG */}
                     </span>
                 </div>
 
                 <div className="flex flex-col ">
-                    <h3 className={"mt-0 font-bold italic text-3xl  " + headerColor}>OUR PROJECT</h3>
-                    <p className={"  max-w-85 mt-1 text-md " + textColor}>
+                    <h3 className={"mt-5 md:mt-0 font-bold italic text-3xl text-center md:text-start" + headerColor}>OUR PROJECT</h3>
+                    <p className={"  max-w-85 mt-1 text-lg md:text-md text-center md:text-start" + textColor}>
 
 
                         <span className={highlightText}>Project CORE </span> is a third-person
