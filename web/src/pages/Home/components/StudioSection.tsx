@@ -8,7 +8,7 @@ export default function StudioSection() {
         <section className="mb-10 md:mb-0">
             <div className="h-200 w-screen flex flex-col items-center mx-auto ">
                 <div className="flex justify-center">
-                <img src={studio_key_art} className="inline-flex justify-center mt-20 items-center h-50"/>
+                <img src={studio_key_art} alt="Sketch of Character Lineup" className="inline-flex justify-center mt-20 items-center h-50"/>
                 {/*<span className="inline-flex justify-center items-center size-50 border border-2 border-line-100 mt-20 text-foreground">*/}
                 {/*    */}
                 {/*</span>*/}
