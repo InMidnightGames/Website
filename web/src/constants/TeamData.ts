@@ -14,6 +14,11 @@ import kyle from "../assets/media/Team_pictures/kyle.png"
 import nix from "../assets/media/Team_pictures/nix.png"
 import ori from "../assets/media/Team_pictures/ori.png"
 import vlad from "../assets/media/Team_pictures/vlad.png"
+import tradd from "../assets/media/Team_pictures/tradd.png"
+import vall from "../assets/media/Team_pictures/vall.png"
+import sofia from "../assets/media/Team_pictures/sofia.png"
+
+
 
 type MemberType = "LEAD" | "MEMBER" | "ADVISOR";
 
@@ -22,7 +27,9 @@ type Department =
     | "TECH"
     | "OPERATIONS"
     | "ART"
-    | "AUDIO";
+    | "AUDIO"
+    | "Narrative"
+    | "Marketing";
 
 type Status = "ACTIVE" | "INACTIVE" | "HIDDEN";
 
@@ -83,7 +90,7 @@ const TeamData: TeamMember[] = [
         member_type: "MEMBER",
         department: "DESIGNER",
         status: "ACTIVE",
-    }),
+    }, tradd),
 
     createMember({
         name: "Nix Du",
@@ -204,5 +211,23 @@ const TeamData: TeamMember[] = [
         department: "AUDIO",
         status: "ACTIVE",
     }, hamin),
+
+    createMember({
+        name: "Alexandre Vallesi",
+        title:"Narrative Designer",
+        highlight: "Writer, narrative designer, and program coordinator at Cave Bear Games and Game Design Skills.",
+        member_type: "MEMBER",
+        department: "Narrative",
+        status: "ACTIVE",
+    }, vall),
+
+    createMember({
+        name:"Sofia Ayad",
+        title: "Marketing Director",
+        highlight: "Marketing, communications, and events director at Insomniac Events, Something in Action, Connect, and Cave Bear Games.",
+        department: "Marketing",
+        member_type: "LEAD",
+        status:"ACTIVE"
+    }, sofia)
 ];
 export default TeamData;
