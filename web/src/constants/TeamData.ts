@@ -69,7 +69,7 @@ const TeamData: TeamMember[] = [
         name: "Excell Pepple",
         title: "Chief Technology Officer",
         highlight:
-            "Software engineer and Technical game designer specializing in server architecture, cloud infrastructure and AI at Amazon Games for New World: Aeternum.",
+            "Software engineer and Technical game designer specializing in server architecture, amd cloud infrastructure at Amazon Games for New World: Aeternum.",
         member_type: "LEAD",
         department: "TECH",
         status: "ACTIVE",
