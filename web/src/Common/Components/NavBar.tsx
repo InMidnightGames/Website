@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import Logo from "../../assets/media/img_logo.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -14,11 +15,12 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <a
-                        className="flex-none text-xl font-semibold text-foreground
+                        className="flex text-xl font-semibold text-foreground
                         focus:outline-hidden focus:opacity-80 transition-all duration-300"
                         href="#hero"
                         aria-label="Brand"
                     >
+                        {/*<img src={Logo} alt="Studio Logo" className=" size-10 md:size-50"/>*/}
                         <span className="inline-flex items-center gap-x-2 text-xl font-bold">
                             In Midnight Games!
                         </span>
