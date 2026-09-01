@@ -34,6 +34,7 @@ type Department =
 type Status = "ACTIVE" | "INACTIVE" | "HIDDEN";
 
 
+
 export type TeamMember = {
     name: string;
     title: string;
