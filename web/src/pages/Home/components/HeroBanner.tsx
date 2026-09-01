@@ -9,11 +9,16 @@ export default function HeroBanner() {
     return (
         <section
             id="hero"
-            className="h-50  xl:h-165 md:h-160 md:bg-cover scroll-mt-16 md:bg-bottom lg:bg-center xl:bg-fixed  flex flex-col items-center justify-center"
-            style={{ backgroundImage: `url(${screenSize > 768? herobanner: herobanner680})` }}
+            className="relative h-50 xl:h-screen  md:h-160 bg-cover scroll-mt-16 md:bg-bottom lg:bg-center xl:bg-fixed"
+            style={{
+                backgroundImage: `url(${screenSize > 768 ? herobanner : herobanner680})`
+            }}
         >
-            {/*<p className="text-6xl text-center font-caslon font-bold text-[#EB4335] ">Studio Logo!</p>*/}
-            <img src={Logo} alt="Studio Logo" className=" size-50 md:size-100"/>
+            <img
+                src={Logo}
+                alt="Studio Logo"
+                className="absolute left-1/2 bottom-0 size-50 md:size-125 -translate-x-1/2 translate-y-1/2 md:translate-y-65 z-10"
+            />
         </section>
     );
 }

@@ -1,10 +1,12 @@
 export default function ProjectSection() {
-    const highlightText = "text-[#EB4335]";
+    const highlightText = "text-[#1397a6]";
     const textColor = "";
     const headerColor = "";
 
     return (
-        <section className=" font-caslon mb-20 md:mb-5 lg:mb-0 ">
+        <section className=" font-caslon mb-20 md:mb-5 lg:mb-0  ">
+            {/* Fade overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#10021e] via-transparent to-black" />
             <div className="h-170 md:h-215 lg:h-120 w-screen flex flex-col  lg:landscape:grid lg:landscape:grid-cols-2  items-center max-w-300 mx-auto px-5">
                 <div className="flex justify-center">
                     <span className="inline-flex justify-center items-center size-50 md:size-80 lg:size-100 border border-line-100 text-foreground">

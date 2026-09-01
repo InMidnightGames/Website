@@ -1,12 +1,12 @@
 import { useState } from "react";
-// import Logo from "../../assets/media/img_logo.png";
+import Logo from "../../assets/media/img_logo_white_rounded.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <header
-            className="sticky top-0 z-50 w-full bg-white bg-navbar border-b border-navbar-line font-caslon"
+            className="sticky top-0 z-50 w-full bg-black text-white bg-navbar border-b border-[#070B21] border-navbar-line font-caslon"
         >
             <nav className="max-w-340 w-full mx-auto px-4">
 
@@ -20,9 +20,9 @@ export default function Navbar() {
                         href="#hero"
                         aria-label="Brand"
                     >
-                        {/*<img src={Logo} alt="Studio Logo" className=" size-10 md:size-50"/>*/}
+                        <img src={Logo} alt="Studio Logo" className=" size-8 mr-3"/>
                         <span className="inline-flex items-center gap-x-2 text-xl font-bold">
-                            In Midnight Games!
+                            In Midnight Games
                         </span>
                     </a>
 
