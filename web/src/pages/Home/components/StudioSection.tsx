@@ -33,31 +33,31 @@ export default function StudioSection() {
 
 
     return (
-        <section ref={sectionRef} className={` md:bg-cover transition-opacity duration-500 ${
+        <section ref={sectionRef} className={` bg-cover bg-top transition-opacity duration-500 ${
             visible ? "opacity-100" : "opacity-0"
         }`} style={{
             backgroundImage: `url(${StudioBackground})`
         }}>
 
             {/*<div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />*/}
-            <div className="h-300 w-screen flex flex-col items-center mx-auto ">
-                <div className="flex justify-center mt-50">
+            <div className="h-215  md:h-310 w-screen flex flex-col items-center mx-auto ">
+                <div className="flex justify-center md:mt-50">
                 <img src={studio_key_art} alt="Sketch of Character Lineup" className="inline-flex justify-center mt-20
-                 items-center h-100"/>
+                 items-center h-50 md:h-100"/>
 
                 </div>
                 {/*<img src={StudioContentBorder} className="inline-flex justify-center mt-20"/>*/}
                 <div className="flex justify-center ">
                     {/*Left Border*/}
                     <img src={StudioContentBorderLeft}
-                        className=" w-30 h-100  mt-10 mr-5 " alt="content border left"
+                        className="hidden min-[480px]:block w-30 h-100 md:mt-20 lg:mt-10 mr-5" alt="content border left"
                     />
 
 
                     {/*Content*/}
                     <div className="flex flex-col items-center text-center font-caslon ">
-                        <h3 className={"mt-0 font-bold italic text-3xl text-center " + headerColor}>OUR STUDIO</h3>
-                        <p className={"text-center  max-w-120 mt-1 text-lg " + textColor}>
+                        <h3 className={"sm:mt-0 md:mt-15 lg:mt-0 font-bold italic md:text-4xl text-3xl text-center " + headerColor}>OUR STUDIO</h3>
+                        <p className={"text-center  max-w-120 mt-1 md:mt-5 text-lg " + textColor}>
                             <span className={highlightText}> In Midnight Games</span> is a gameplay-first independent studio founded by combat designer and high-level
                             competitive player <span className={highlightText}>Tanner Liou</span>. Our {memberCount}-person team brings experience spanning indie, AAA production,
                             and large-scale online development, supported by seven attached industry advisors. We build games by
@@ -77,7 +77,7 @@ export default function StudioSection() {
                     </div>
                     {/*Right Border*/}
                     <img src={StudioContentBorderRight}
-                         className=" w-30 h-100  mt-10 ml-5 "
+                         className="hidden min-[480px]:block w-30 h-100 md:mt-20 lg:mt-10 ml-5"
                          alt="content border right"
                     />
 

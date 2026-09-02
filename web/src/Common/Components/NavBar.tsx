@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../../assets/media/img_logo_white_rounded.png";
+import Logo from "../../assets/media/img_logo_wide.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -20,10 +20,10 @@ export default function Navbar() {
                         href="#hero"
                         aria-label="Brand"
                     >
-                        <img src={Logo} alt="Studio Logo" className=" size-8 mr-3"/>
-                        <span className="inline-flex items-center gap-x-2 text-xl font-bold">
-                            In Midnight Games
-                        </span>
+                        <img src={Logo} alt="Studio Logo" className="h-20 mr-3"/>
+                        {/*<span className="hidden inline-flex items-center gap-x-2 text-xl font-bold">*/}
+                        {/*    In Midnight Games*/}
+                        {/*</span>*/}
                     </a>
 
                     {/* Mobile menu button */}

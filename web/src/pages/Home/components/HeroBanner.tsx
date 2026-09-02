@@ -9,7 +9,7 @@ export default function HeroBanner() {
     return (
         <section
             id="hero"
-            className="relative h-50 xl:h-screen  md:h-160 bg-cover scroll-mt-16 md:bg-bottom lg:bg-center xl:bg-fixed"
+            className="relative h-50 xl:h-screen md:portrait:h-100  md:h-160 bg-cover scroll-mt-16 md:bg-bottom lg:bg-center xl:bg-fixed"
             style={{
                 backgroundImage: `url(${screenSize > 768 ? herobanner : herobanner680})`
             }}

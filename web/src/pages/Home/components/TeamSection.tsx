@@ -13,7 +13,7 @@ export default function TeamSection(){
             width < 1024 ? 2 :
                 3;
     return (
-        <section id="team" className="w-screen scroll-mt-16 font-caslon flex flex-col justify-center
+        <section id="team" className="w-screen scroll-mt-30 font-caslon flex flex-col justify-center
         items-center sm:mt-10 md:mt-5 lg:mt-10 bg-cover " style={{backgroundImage: `url(${BackgroundImage})`}}>
             <h3 className={"mt-0 font-bold text-4xl  " + headerColor}>OUR TEAM</h3>
             <p className={"mt-0 italic text-md italic mb-10 " + subHeaderColor}>Take a step into the end</p>

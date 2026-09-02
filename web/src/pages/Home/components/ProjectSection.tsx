@@ -4,19 +4,21 @@ export default function ProjectSection() {
     const headerColor = "";
 
     return (
-        <section className=" font-caslon mb-20 md:mb-5 lg:mb-0  ">
+        <section className=" font-caslon  lg:mb-20 md:mb-5 lg:mb-0  ">
             {/* Fade overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#10021e] via-transparent to-black" />
-            <div className="h-170 md:h-215 lg:h-120 w-screen flex flex-col  lg:landscape:grid lg:landscape:grid-cols-2  items-center max-w-300 mx-auto px-5">
-                <div className="flex justify-center">
-                    <span className="inline-flex justify-center items-center size-50 md:size-80 lg:size-100 border border-line-100 text-foreground">
+            {/*<div className="absolute inset-0 bg-gradient-to-b from-[#10021e] via-transparent to-black" />*/}
+            <div className="h-150 md:h-180 lg:h-150 portrait:h-200 w-screen flex flex-col md:portrait:grid md:portrait:grid-cols-2
+            landscape:grid landscape:grid-cols-2
+              lg:landscape:grid lg:landscape:grid-cols-2  items-center max-w-300 mx-auto px-5">
+                <div className="flex justify-center mt-20 ">
+                    <span className="inline-flex justify-center items-center size-50 landscape:size-80 md:size-80 lg:size-100 border border-line-100 text-foreground">
                         {/* SVG */}
                     </span>
                 </div>
 
-                <div className="flex flex-col ">
-                    <h3 className={" mt-10 xl:mt-5 lg:mt-0 font-bold italic text-3xl text-center lg:text-start" + headerColor}>OUR PROJECT</h3>
-                    <p className={"  max-w-85 mt-5 lg:mt-1 text-lg md:text-md text-center md:text-start" + textColor}>
+                <div className="flex flex-col  ">
+                    <h3 className={" mt-0 md:mt-15 xl:mt-5 lg:mt-20 font-bold italic text-3xl md:portrait:text-4xl text-center md:portrait:text-start landscape:text-start lg:text-start" + headerColor}>OUR PROJECT</h3>
+                    <p className={"  max-w-85 mt-5 lg:mt-1 text-lg landscape:text-md md:text-md text-center md:text-start landscape:text-start" + textColor}>
 
 
                         <span className={highlightText}>Project CORE </span> is a third-person

@@ -3,7 +3,7 @@ import {socials, type SocialLinks} from"../../constants/SocialLinks.tsx"
 const SocialCard = ()=>{
 
     return (
-        <div className="flex flex-row pb-5 pt-2 justify-center space-x-10">
+        <div className="flex flex-row  pb-5 pt-2  justify-center space-x-5">
             {socials.map((social: SocialLinks,i: number)=>{
                 return <a key={i} href={social.url} target="_blank"
                           className="w-10"
