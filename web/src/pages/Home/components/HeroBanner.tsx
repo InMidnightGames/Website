@@ -1,6 +1,6 @@
-import herobanner from "../../../assets/media/herobanner.png"
+import herobanner from "../../../assets/media/herobanner.webp"
 import herobanner680 from "../../../assets/media/herobanner-680.png"
-import Logo from "../../../assets/media/img_logo.png"
+import Logo from "../../../assets/media/img_logo.webp"
 import useScreenWidth from "../hooks/ScreenWidth.tsx";
 
 export default function HeroBanner() {

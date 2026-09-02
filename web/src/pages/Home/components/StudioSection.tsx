@@ -1,6 +1,6 @@
-import studio_key_art from "../../../assets/media/studio_key_art.png"
+import studio_key_art from "../../../assets/media/studio_key_art.webp"
 import TeamData from "../../../constants/TeamData.ts";
-import StudioBackground from "../../../assets/media/img_bg_studio.png"
+import StudioBackground from "../../../assets/media/img_bg_studio.webp"
 import StudioContentBorderLeft from "../../../assets/media/studio_content_left.png"
 import StudioContentBorderRight from "../../../assets/media/studio_content_right.png"
 import {useEffect, useRef, useState} from "react";

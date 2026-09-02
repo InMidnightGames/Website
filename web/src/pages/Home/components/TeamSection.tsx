@@ -1,6 +1,6 @@
 import ProfileList from "./ProfileList.tsx";
 import useScreenWidth from "../hooks/ScreenWidth.tsx";
-import BackgroundImage from "../../../assets/media/team-section-cloud.png";
+import BackgroundImage from "../../../assets/media/team-section-cloud.webp";
 
 export default function TeamSection(){
     let headerColor:string = "text-white";
