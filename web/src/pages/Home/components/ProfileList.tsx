@@ -8,7 +8,12 @@ interface ProfileListProps {
     roleColor: string,
 }
 
-export default function ProfileList({ cols, filter, nameColor, roleColor }: ProfileListProps) {
+export default function ProfileList({
+                                        cols,
+                                        filter,
+                                        nameColor,
+                                        roleColor
+                                    }: ProfileListProps) {
     const filteredContent = TeamData.filter(filter);
 
     const colStyles: Record<number, string> = {
@@ -26,26 +31,38 @@ export default function ProfileList({ cols, filter, nameColor, roleColor }: Prof
 
     return (
         <div
-            className={`grid  ${colStyle} gap-5 md:portrait:w-170  
-            lg:landscape:gap-8 w-50 landscape:gap-2 landscape:w-180 md:landscape:w-200 xl:landscape:w-250 min-h-screen flex 
-            mb-25
+            className={`
+                grid
+                ${colStyle}
+                w-full
+                max-w-5xl
+                gap-x-8
+                gap-y-10
+                px-4
+                mb-25
             `}
         >
             {filteredContent.map((member, index) => {
-                const isLastRow = index >= filteredContent.length - remainder;
+                const isLastRow =
+                    remainder > 0 &&
+                    index >= filteredContent.length - remainder;
 
                 let position = "";
 
-                if (isLastRow && remainder > 0) {
-                    if (remainder === 1) {
-                        // Center the single remaining item
-                        position = "col-start-2";
-                    }
+                if (isLastRow && remainder === 1 && cols > 1) {
+                    position = "col-start-2";
                 }
 
                 return (
-                    <div key={member.name} className={position }>
-                        <ProfileCard member={member} nameColor={nameColor} roleColor={roleColor} />
+                    <div
+                        key={member.name}
+                        className={position}
+                    >
+                        <ProfileCard
+                            member={member}
+                            nameColor={nameColor}
+                            roleColor={roleColor}
+                        />
                     </div>
                 );
             })}

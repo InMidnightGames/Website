@@ -42,7 +42,7 @@ export default function StudioSection() {
                 backgroundImage: `url(${StudioBackground})`
             }}
         >
-            <div className="   w-full flex flex-col items-center mx-auto pb-50">
+            <div className="   w-full flex flex-col items-center mx-auto pb-10 lg:pb-25">
 
                 {/* Key Art */}
                 <div className="flex justify-center w-full ">
@@ -80,11 +80,11 @@ export default function StudioSection() {
                     />
 
                     {/* Content */}
-                    <div className="flex flex-col items-center text-center font-caslon w-full">
+                    <div className="flex flex-col items-center text-center font-caslon w-full ">
 
                         <h3
                             className={
-                                "mt-4 md:mt-8 lg:mt-4 font-bold text-3xl md:text-4xl xl:text-5xl text-center " +
+                                "mt-6 md:mt-8 lg:mt-4 font-bold text-3xl md:text-4xl xl:text-5xl text-center " +
                                 headerColor
                             }
                         >
@@ -93,7 +93,7 @@ export default function StudioSection() {
 
                         <p
                             className={
-                                "w-full max-w-2xl mt-3 md:mt-5 text-base md:text-lg xl:text-xl text-justify " +
+                                "w-full max-w-2xl mt-5 md:mt-5 text-base md:text-lg xl:text-xl text-justify " +
                                 textColor
                             }
                         >
