@@ -60,7 +60,7 @@ const TeamData: TeamMember[] = [
         name: "Tanner Liou",
         title: "Founder, Chief Creative Officer",
         highlight:
-            "World-class, multi-genre, multi-rank 1 professional player, esports coach, partnered content creator, AAA consultant, and lead combat designer.",
+            "World-class, multi-genre, multi-rank 1 competitive player, esports coach, partnered content creator, AAA consultant, and lead combat designer.",
         member_type: "LEAD",
         department: "DESIGNER",
         status: "ACTIVE",
