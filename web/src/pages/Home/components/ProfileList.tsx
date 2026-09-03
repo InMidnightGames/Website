@@ -26,7 +26,10 @@ export default function ProfileList({ cols, filter, nameColor, roleColor }: Prof
 
     return (
         <div
-            className={`grid  ${colStyle} gap-5 md:portrait:w-170  lg:landscape:gap-8 w-50 landscape:gap-2 landscape:w-180 md:landscape:w-200 xl:landscape:w-250 min-h-screen flex `}
+            className={`grid  ${colStyle} gap-5 md:portrait:w-170  
+            lg:landscape:gap-8 w-50 landscape:gap-2 landscape:w-180 md:landscape:w-200 xl:landscape:w-250 min-h-screen flex 
+            mb-25
+            `}
         >
             {filteredContent.map((member, index) => {
                 const isLastRow = index >= filteredContent.length - remainder;
@@ -41,7 +44,7 @@ export default function ProfileList({ cols, filter, nameColor, roleColor }: Prof
                 }
 
                 return (
-                    <div key={member.name} className={position}>
+                    <div key={member.name} className={position }>
                         <ProfileCard member={member} nameColor={nameColor} roleColor={roleColor} />
                     </div>
                 );
