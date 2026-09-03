@@ -24,7 +24,7 @@ export const socials: SocialLinks[] = [
     },
     {
         name: "Instagram",
-        url: "http://instagram.com/inmidnightgames",
+        url: "http://instagram.com/inmidnight.games",
         image: instagramLogo,
     },
     {
