@@ -16,9 +16,9 @@ export default function ProjectSection() {
                     </span>
                 </div>
 
-                <div className="flex flex-col  ">
-                    <h3 className={" mt-0 md:mt-15 xl:mt-20 lg:mt-20 font-bold md:text-4xl text-3xl md:portrait:text-4xl text-center md:portrait:text-start landscape:text-start lg:text-start" + headerColor}>OUR PROJECT</h3>
-                    <p className={"  max-w-85 mt-5 lg:landscape:text-justify lg:mt-5 text-lg xl:text-xl landscape:text-md md:text-md  md:text-start landscape:text-start" + textColor}>
+                <div className="flex flex-col w-85  ">
+                    <h3 className={" mt-0 md:mt-15 xl:mt-20 lg:mt-20 font-bold md:text-4xl text-3xl md:portrait:text-4xl text-center md:portrait:text-start landscape:text-center lg:text-center" + headerColor}>OUR PROJECT</h3>
+                    <p className={"   mt-5 lg:landscape:text-justify lg:mt-5 text-lg xl:text-xl landscape:text-md md:text-md  md:text-start landscape:text-start" + textColor}>
 
 
                         <span className={highlightText}>Project CORE </span> is a third-person
