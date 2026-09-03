@@ -12,7 +12,7 @@ export default function Home() {
             <StudioSection/>
             <ProjectSection/>
             <img src={ProjectBorder}
-                 className=" w-4/5 mx-auto" alt="seperation between Project section and team section"
+                 className=" w-4/5 xl:w-3/5 mx-auto" alt="seperation between Project section and team section"
             />
             <TeamSection />
         </main>
