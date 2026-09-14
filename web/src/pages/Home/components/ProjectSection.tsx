@@ -7,13 +7,13 @@ export default function ProjectSection() {
         <section className=" font-caslon  lg:mb-20 md:mb-5  lg:mb-0  ">
             {/* Fade overlay */}
             {/*<div className="absolute inset-0 bg-gradient-to-b from-[#10021e] via-transparent to-black" />*/}
-            <div className="h-150 md:h-180 lg:h-150 portrait:h-200  w-screen flex flex-col md:portrait:grid md:portrait:grid-cols-2
+            <div className="h-150 md:h-180 lg:h-150 portrait:h-200 portrait:gap-2  w-screen flex flex-col md:portrait:grid md:portrait:grid-cols-2
             landscape:grid landscape:grid-cols-2
               lg:landscape:grid lg:landscape:grid-cols-2  items-center max-w-300 mx-auto px-5">
-                <div className="flex justify-center mt-5 ">
-                    <span className="inline-flex justify-center items-center size-50 landscape:size-80 md:size-80 lg:size-100 border border-line-100 text-foreground">
-                        {/* SVG */}
-                    </span>
+                <div className="flex justify-center mt-20 ">
+                    <img src="/Slayer_HeroV1.png"
+                         className="inline-flex justify-center items-center size-50 landscape:size-100 md:size-100 lg:size-100  text-foreground"
+                    />
                 </div>
 
                 <div className="flex flex-col   ">
