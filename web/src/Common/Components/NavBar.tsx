@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import Logo from "../../assets/media/img_logo_wide.png";
 
 export default function Navbar() {
@@ -14,17 +15,17 @@ export default function Navbar() {
                 <div className="flex items-center justify-between py-3">
 
                     {/* Logo */}
-                    <a
+                    <Link
                         className="flex text-xl font-semibold text-foreground
                         focus:outline-hidden focus:opacity-80 transition-all duration-300"
-                        href="#hero"
+                        to="/#hero"
                         aria-label="Brand"
                     >
                         <img src={Logo} alt="Studio Logo" className="h-20 mr-3"/>
                         {/*<span className="hidden inline-flex items-center gap-x-2 text-xl font-bold">*/}
                         {/*    In Midnight Games*/}
                         {/*</span>*/}
-                    </a>
+                    </Link>
 
                     {/* Mobile menu button */}
                     <button
@@ -74,21 +75,29 @@ export default function Navbar() {
                     {/* Desktop navigation */}
                     <div className="hidden sm:block">
                         <div className="flex items-center gap-5">
-                            <a
+                            <Link
                                 className="font-bold text-xl text-primary-active
                                 hover:text-[#EB4335] transition-all duration-300"
-                                href="#team"
+                                to="/#team"
                             >
                                 Team
-                            </a>
+                            </Link>
 
-                            <a
+                            <Link
                                 className="text-xl text-navbar-nav-foreground
                                 hover:text-[#EB4335] transition-all duration-300"
-                                href="#footer"
+                                to="/#newsletter"
+                            >
+                                Newsletter
+                            </Link>
+
+                            <Link
+                                className="text-xl text-navbar-nav-foreground
+                                hover:text-[#EB4335] transition-all duration-300"
+                                to="/#footer"
                             >
                                 Contact
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -105,23 +114,32 @@ export default function Navbar() {
                 >
                     <div className="flex flex-col gap-5">
 
-                        <a
+                        <Link
                             className="font-bold text-xl text-primary-active
                             hover:text-[#EB4335] transition-all duration-300"
-                            href="#team"
+                            to="/#team"
                             onClick={() => setMenuOpen(false)}
                         >
                             Team
-                        </a>
+                        </Link>
 
-                        <a
+                        <Link
                             className="text-xl text-navbar-nav-foreground
                             hover:text-[#EB4335] transition-all duration-300"
-                            href="#footer"
+                            to="/#newsletter"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Newsletter
+                        </Link>
+
+                        <Link
+                            className="text-xl text-navbar-nav-foreground
+                            hover:text-[#EB4335] transition-all duration-300"
+                            to="/#footer"
                             onClick={() => setMenuOpen(false)}
                         >
                             Contact
-                        </a>
+                        </Link>
 
                     </div>
                 </div>

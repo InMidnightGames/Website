@@ -1,13 +1,11 @@
-import Layout from "./Common/layout/index.tsx"
+import { RouterProvider } from "react-router";
 import './App.css'
-import Home from "./pages/Home";
+import router from "./routes/routes.tsx";
 
 function App() {
 
   return (
-      <Layout>
-          <Home />
-      </Layout>
+      <RouterProvider router={router} />
   )
 }
 
