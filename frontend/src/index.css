@@ -1,0 +1,357 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+
+/* ==========================================================================
+   FONTS
+   Caslon Antique, the studio's brand face, used for headings and body copy
+   as on the original site.
+   ========================================================================== */
+
+@font-face {
+    font-family: "Caslon Antique";
+    src: url("./assets/fonts/caslon-antique/CaslonAntique.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Caslon Antique";
+    src: url("./assets/fonts/caslon-antique/CaslonAntique-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Caslon Antique";
+    src: url("./assets/fonts/caslon-antique/CaslonAntique-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Caslon Antique";
+    src: url("./assets/fonts/caslon-antique/CaslonAntique-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ==========================================================================
+   TOKENS
+   Fixed colours (night, moon, blood...) never change. They're used over
+   artwork, where the art is always dark. Semantic colours (page, ink, line...)
+   follow the theme, which siteConfig.theme sets on <html data-theme>.
+   ========================================================================== */
+
+@theme {
+    --font-display: "Caslon Antique", "Times New Roman", serif;
+    --font-sans: "Caslon Antique", "Times New Roman", serif;
+
+    --color-night: #08070e;
+    --color-moon: #f3ece0;
+    --color-blood: #eb4335;
+    --color-ember: #bd2f26;
+    --color-ember-hover: #d23a2e;
+    --color-wine: #6e1a2b;
+
+    --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+
+    --animate-fade-up: fade-up 0.9s var(--ease-out-soft) both;
+    --animate-fade-in: fade-in 0.8s var(--ease-out-soft) both;
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+@theme inline {
+    --color-page: var(--theme-page);
+    --color-surface: var(--theme-surface);
+    --color-raised: var(--theme-raised);
+    --color-ink: var(--theme-ink);
+    --color-muted: var(--theme-muted);
+    --color-faint: var(--theme-faint);
+    --color-line: var(--theme-line);
+    --color-line-strong: var(--theme-line-strong);
+    --color-band: var(--theme-band);
+    --color-accent: var(--theme-accent);
+    --color-inverse: var(--theme-inverse);
+    --color-inverse-ink: var(--theme-inverse-ink);
+}
+
+/* Dark (default). */
+:root {
+    --theme-page: #08070e;
+    --theme-surface: #0f0d18;
+    --theme-raised: #181525;
+    --theme-ink: #f3ece0;
+    --theme-muted: #bdb5c6;
+    --theme-faint: #8f879d;
+    --theme-line: rgb(243 236 224 / 0.12);
+    --theme-line-strong: rgb(243 236 224 / 0.24);
+    --theme-band: #e9e1d3;
+    --theme-accent: #eb4335;
+    --theme-inverse: #f3ece0;
+    --theme-inverse-ink: #08070e;
+    color-scheme: dark;
+}
+
+/* Light: moon-cream paper with midnight ink. */
+:root[data-theme="light"] {
+    --theme-page: #f1ebe0;
+    --theme-surface: #e9e1d4;
+    --theme-raised: #ddd3c3;
+    --theme-ink: #15121e;
+    --theme-muted: #463f52;
+    --theme-faint: #625b6e;
+    --theme-line: rgb(21 18 30 / 0.14);
+    --theme-line-strong: rgb(21 18 30 / 0.28);
+    --theme-band: #e2d8c7;
+    --theme-accent: #b3261d;
+    --theme-inverse: #15121e;
+    --theme-inverse-ink: #f3ece0;
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+    :root[data-theme="system"] {
+        --theme-page: #f1ebe0;
+        --theme-surface: #e9e1d4;
+        --theme-raised: #ddd3c3;
+        --theme-ink: #15121e;
+        --theme-muted: #463f52;
+        --theme-faint: #625b6e;
+        --theme-line: rgb(21 18 30 / 0.14);
+        --theme-line-strong: rgb(21 18 30 / 0.28);
+        --theme-band: #e2d8c7;
+        --theme-accent: #b3261d;
+        --theme-inverse: #15121e;
+        --theme-inverse-ink: #f3ece0;
+        color-scheme: light;
+    }
+}
+
+/* Z-index scale: nav 40, CTA dock 30, skip link 60. */
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        background: var(--theme-page);
+    }
+
+    body {
+        @apply bg-page font-sans text-lg leading-relaxed text-ink antialiased;
+        /* Tilted and torn bands overhang the viewport edges on purpose. */
+        overflow-x: clip;
+    }
+
+    ::selection {
+        background: var(--color-ember);
+        color: var(--color-moon);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-blood);
+        outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+/* Uppercase, widely tracked Caslon: the heading voice. */
+@utility display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+@utility link-accent {
+    color: var(--theme-accent);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+/* Torn-paper edges (generated once, see frontend/scripts/ragged-edges.mjs). */
+@utility torn {
+    clip-path: polygon(0.0% 0.0px, 11.1% 3.2px, 22.2% 1.0px, 33.3% 0.7px, 44.4% 2.6px, 55.6% 1.9px, 66.7% 1.2px, 77.8% 2.6px, 88.9% 2.6px, 100.0% 1.9px, calc(100% - 2.4px) 25%, calc(100% - 2.2px) 50%, calc(100% - 2.9px) 75%, 100.0% calc(100% - 0.8px), 88.9% calc(100% - 1.3px), 77.8% calc(100% - 2.5px), 66.7% calc(100% - 2.4px), 55.6% calc(100% - 0.2px), 44.4% calc(100% - 2.4px), 33.3% calc(100% - 1.6px), 22.2% calc(100% - 3.2px), 11.1% calc(100% - 2.8px), 0.0% calc(100% - 0.4px), 1.8px 75%, 3.2px 50%, 2.4px 25%);
+}
+
+@utility torn-frame {
+    clip-path: polygon(0.0% 4.5px, 7.1% 4.0px, 14.3% 6.4px, 21.4% 6.4px, 28.6% 2.6px, 35.7% 2.3px, 42.9% 5.9px, 50.0% 2.3px, 57.1% 1.1px, 64.3% 2.1px, 71.4% 3.0px, 78.6% 2.1px, 85.7% 6.6px, 92.9% 3.9px, 100.0% 5.1px, calc(100% - 6.1px) 25%, calc(100% - 0.4px) 50%, calc(100% - 1.9px) 75%, 100.0% calc(100% - 3.9px), 92.9% calc(100% - 3.6px), 85.7% calc(100% - 3.0px), 78.6% calc(100% - 1.4px), 71.4% calc(100% - 6.4px), 64.3% calc(100% - 0.4px), 57.1% calc(100% - 2.6px), 50.0% calc(100% - 2.4px), 42.9% calc(100% - 4.7px), 35.7% calc(100% - 6.5px), 28.6% calc(100% - 3.6px), 21.4% calc(100% - 1.2px), 14.3% calc(100% - 2.8px), 7.1% calc(100% - 2.0px), 0.0% calc(100% - 2.6px), 3.0px 75%, 2.3px 50%, 3.7px 25%);
+}
+
+@utility torn-bottom {
+    clip-path: polygon(0 0, 100% 0, 100.0% calc(100% - 16.0px), 97.5% calc(100% - 6.1px), 95.0% calc(100% - 23.6px), 92.5% calc(100% - 11.9px), 90.0% calc(100% - 22.4px), 87.5% calc(100% - 16.5px), 85.0% calc(100% - 16.5px), 82.5% calc(100% - 13.4px), 80.0% calc(100% - 13.1px), 77.5% calc(100% - 17.9px), 75.0% calc(100% - 24.4px), 72.5% calc(100% - 10.3px), 70.0% calc(100% - 18.4px), 67.5% calc(100% - 6.5px), 65.0% calc(100% - 15.3px), 62.5% calc(100% - 9.1px), 60.0% calc(100% - 8.6px), 57.5% calc(100% - 10.2px), 55.0% calc(100% - 20.7px), 52.5% calc(100% - 22.8px), 50.0% calc(100% - 2.9px), 47.5% calc(100% - 21.3px), 45.0% calc(100% - 2.0px), 42.5% calc(100% - 10.6px), 40.0% calc(100% - 4.0px), 37.5% calc(100% - 2.0px), 35.0% calc(100% - 25.9px), 32.5% calc(100% - 5.7px), 30.0% calc(100% - 16.4px), 27.5% calc(100% - 3.8px), 25.0% calc(100% - 11.9px), 22.5% calc(100% - 15.4px), 20.0% calc(100% - 3.6px), 17.5% calc(100% - 24.0px), 15.0% calc(100% - 23.0px), 12.5% calc(100% - 23.2px), 10.0% calc(100% - 23.0px), 7.5% calc(100% - 23.6px), 5.0% calc(100% - 19.8px), 2.5% calc(100% - 7.2px), 0.0% calc(100% - 0.3px));
+}
+
+@utility torn-band {
+    clip-path: polygon(0.0% 4.5px, 2.5% 1.4px, 5.0% 0.0px, 7.5% 11.1px, 10.0% 4.2px, 12.5% 13.3px, 15.0% 8.8px, 17.5% 12.4px, 20.0% 4.3px, 22.5% 15.9px, 25.0% 4.2px, 27.5% 6.7px, 30.0% 16.1px, 32.5% 2.1px, 35.0% 8.8px, 37.5% 0.1px, 40.0% 16.4px, 42.5% 11.5px, 45.0% 16.6px, 47.5% 0.4px, 50.0% 16.2px, 52.5% 3.4px, 55.0% 17.4px, 57.5% 10.2px, 60.0% 12.2px, 62.5% 4.8px, 65.0% 4.0px, 67.5% 3.8px, 70.0% 10.2px, 72.5% 0.9px, 75.0% 13.8px, 77.5% 12.6px, 80.0% 12.9px, 82.5% 9.0px, 85.0% 0.6px, 87.5% 2.0px, 90.0% 16.5px, 92.5% 2.4px, 95.0% 12.4px, 97.5% 16.1px, 100.0% 0.7px, 100.0% calc(100% - 15.9px), 97.5% calc(100% - 15.5px), 95.0% calc(100% - 17.9px), 92.5% calc(100% - 17.2px), 90.0% calc(100% - 13.8px), 87.5% calc(100% - 7.6px), 85.0% calc(100% - 4.5px), 82.5% calc(100% - 13.1px), 80.0% calc(100% - 15.9px), 77.5% calc(100% - 7.2px), 75.0% calc(100% - 4.2px), 72.5% calc(100% - 7.3px), 70.0% calc(100% - 16.0px), 67.5% calc(100% - 10.1px), 65.0% calc(100% - 6.3px), 62.5% calc(100% - 11.2px), 60.0% calc(100% - 13.2px), 57.5% calc(100% - 6.0px), 55.0% calc(100% - 13.1px), 52.5% calc(100% - 7.6px), 50.0% calc(100% - 3.6px), 47.5% calc(100% - 5.6px), 45.0% calc(100% - 17.7px), 42.5% calc(100% - 17.9px), 40.0% calc(100% - 11.4px), 37.5% calc(100% - 15.7px), 35.0% calc(100% - 16.5px), 32.5% calc(100% - 3.6px), 30.0% calc(100% - 11.6px), 27.5% calc(100% - 2.4px), 25.0% calc(100% - 9.0px), 22.5% calc(100% - 10.0px), 20.0% calc(100% - 13.9px), 17.5% calc(100% - 17.0px), 15.0% calc(100% - 8.7px), 12.5% calc(100% - 3.4px), 10.0% calc(100% - 8.0px), 7.5% calc(100% - 3.0px), 5.0% calc(100% - 11.9px), 2.5% calc(100% - 9.4px), 0.0% calc(100% - 10.1px));
+}
+
+@layer components {
+    .shell {
+        @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-10;
+    }
+
+    /* Small accent label above a heading. Used sparingly. */
+    .eyebrow {
+        @apply font-display text-sm font-bold tracking-[0.3em] text-accent uppercase;
+    }
+
+    /* Buttons: torn-paper labels, after Gardens Interactive.
+       primary = crimson, secondary = the theme's inverse (moon on dark, ink on light). */
+    .btn {
+        @apply torn inline-flex items-center justify-center gap-2.5 px-7 pt-3.5 pb-3 font-display text-[15px] font-bold
+        tracking-[0.22em] whitespace-nowrap uppercase transition-[background-color,color,transform] duration-300
+        ease-(--ease-out-soft) hover:-translate-y-0.5 active:translate-y-0 disabled:cursor-wait disabled:opacity-60;
+    }
+
+    .btn-primary {
+        @apply bg-ember text-moon hover:bg-ember-hover;
+    }
+
+    .btn-secondary {
+        @apply bg-inverse text-inverse-ink hover:opacity-90;
+    }
+
+    /* Always-dark button, for crimson or light artwork backgrounds. */
+    .btn-ink {
+        @apply bg-night text-moon hover:bg-[#1f1b2e];
+    }
+
+    /* Always-light button for use over artwork. */
+    .btn-moon {
+        @apply bg-moon text-night hover:bg-white;
+    }
+
+    .form-label {
+        @apply mb-1.5 block font-display text-sm font-bold tracking-[0.14em] text-muted uppercase;
+    }
+
+    .form-field {
+        @apply block w-full border border-line-strong bg-page px-4 py-3 font-sans text-lg text-ink placeholder:text-faint
+        focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none;
+    }
+
+    /* Section title between two hairlines, after the Gardens "Meet the Gardeners" heading. */
+    .ruled-title {
+        @apply flex items-center gap-6 text-center;
+
+        &::before,
+        &::after {
+            content: "";
+            @apply h-px flex-1 bg-line-strong;
+        }
+    }
+
+    /* Off-screen honeypot input; see HoneypotField.tsx */
+    .hp-field {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Scroll-reveal (see common/components/Reveal.tsx). */
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+            opacity 0.8s var(--ease-out-soft),
+            transform 0.8s var(--ease-out-soft);
+    }
+
+    .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .reveal {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    /* Admin-authored dev blog HTML. */
+    .prose-post {
+        @apply text-xl leading-relaxed text-muted;
+
+        & > * + * {
+            @apply mt-6;
+        }
+
+        & h2 {
+            @apply display mt-14 text-2xl text-ink;
+        }
+
+        & h3 {
+            @apply mt-10 text-xl font-bold text-ink;
+        }
+
+        & a {
+            @apply link-accent;
+        }
+
+        & strong {
+            @apply font-bold text-ink;
+        }
+
+        & ul {
+            @apply list-disc space-y-2 pl-6 marker:text-accent;
+        }
+
+        & ol {
+            @apply list-decimal space-y-2 pl-6 marker:text-accent;
+        }
+
+        & blockquote {
+            @apply border-l-2 border-accent pl-6 text-2xl text-ink italic;
+        }
+
+        & img {
+            @apply w-full;
+        }
+
+        & iframe {
+            @apply aspect-video h-auto w-full;
+        }
+    }
+}
