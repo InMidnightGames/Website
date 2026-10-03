@@ -40,7 +40,7 @@ export default function HeroSection() {
             <div className="shell flex flex-1 flex-col pt-24 pb-32 lg:pb-20">
                 <motion.div
                     style={{ y: copyY, opacity: copyOpacity }}
-                    className="my-auto flex max-w-md flex-col items-center text-center lg:max-w-[460px]"
+                    className="my-auto flex max-w-md flex-col items-center text-center lg:max-w-[28.75rem]"
                 >
                     <h1 className="sr-only">{siteConfig.name}</h1>
                     <img
@@ -48,7 +48,7 @@ export default function HeroSection() {
                         alt=""
                         width={900}
                         height={900}
-                        className="-my-[7%] w-[min(380px,74vw)] animate-fade-up drop-shadow-[0_10px_30px_rgb(0_0_0/0.55)]"
+                        className="-my-[7%] w-[min(23.75rem,74vw)] animate-fade-up drop-shadow-[0_10px_30px_rgb(0_0_0/0.55)]"
                     />
                     <p className="mt-3 animate-fade-up text-xl leading-snug text-moon/90 [animation-delay:150ms] md:text-2xl">
                         {hero.mission}

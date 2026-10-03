@@ -33,7 +33,7 @@ function LatestPosts() {
         <ul className="space-y-6">
             {data.items.map((post) => (
                 <li key={post.id}>
-                    <article className="group relative grid grid-cols-[112px_1fr] items-center gap-5 transition-transform duration-300 ease-(--ease-out-soft) hover:translate-x-1.5 sm:grid-cols-[140px_1fr]">
+                    <article className="group relative grid grid-cols-[7rem_1fr] items-center gap-5 transition-transform duration-300 ease-(--ease-out-soft) hover:translate-x-1.5 sm:grid-cols-[8.75rem_1fr]">
                         <PostCover post={post} className="torn-frame aspect-[4/3] transition-transform duration-500 group-hover:-rotate-2" />
                         <div>
                             <PostMeta post={post} />

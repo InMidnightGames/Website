@@ -41,14 +41,14 @@ export default function NavBar() {
                     solid ? "bg-night shadow-[0_1px_0_rgb(243_236_224/0.1)]" : "bg-gradient-to-b from-night/75 to-transparent"
                 }`}
             >
-                <nav aria-label="Main" className="flex h-16 items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-8">
-                    <Link to="/" aria-label={`${siteConfig.name} home`} className="relative flex h-full w-[150px] shrink-0 items-center lg:w-[180px]">
+                <nav aria-label="Main" className="flex h-16 items-center justify-between gap-6 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
+                    <Link to="/" aria-label={`${siteConfig.name} home`} className="relative flex h-full w-[9.375rem] shrink-0 items-center lg:w-[11.25rem]">
                         {/* Over artwork: the emblem hangs on a torn ribbon. Once the bar is solid
                             the ribbon lifts away and the wide logo takes its place. */}
                         <span
                             aria-hidden="true"
-                            className={`torn-frame absolute top-0 left-0 flex h-[76px] w-16 items-end justify-center bg-moon pb-3 transition-transform duration-500 ease-(--ease-out-soft) lg:h-[88px] lg:w-[72px] ${
-                                solid ? "-translate-y-[110%]" : "translate-y-[-8px]"
+                            className={`torn-frame absolute top-0 left-0 flex h-[4.75rem] w-16 items-end justify-center bg-moon pb-3 transition-transform duration-500 ease-(--ease-out-soft) lg:h-[5.5rem] lg:w-[4.5rem] ${
+                                solid ? "-translate-y-[110%]" : "translate-y-[-0.5rem]"
                             }`}
                         >
                             <img src={siteConfig.emblem} alt="" width={48} height={48} className="size-11 lg:size-12" />

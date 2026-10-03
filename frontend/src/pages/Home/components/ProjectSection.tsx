@@ -13,7 +13,7 @@ export default function ProjectSection() {
         <section id="project" className="scroll-mt-16 overflow-hidden py-24 md:py-32">
             <div className="shell grid items-center gap-16 lg:grid-cols-12 lg:gap-20">
                 <Reveal className="order-2 lg:order-1 lg:col-span-6">
-                    <TiltCard className="mx-auto w-full max-w-[500px]" panelClassName="rotate-1 bg-[#d9d4cc]">
+                    <TiltCard className="mx-auto w-full max-w-[31.25rem]" panelClassName="rotate-1 bg-[#d9d4cc]">
                         <img src={project.image} alt={project.alt} width={1400} height={1469} loading="lazy" className="w-full" />
                     </TiltCard>
                 </Reveal>

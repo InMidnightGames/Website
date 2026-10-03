@@ -27,7 +27,7 @@ export default function StudioSection() {
             {/* A flat light band: the navy silhouettes need a pale ground to read. */}
             <div ref={bandRef} className="torn-band mt-12 overflow-hidden bg-band py-10 md:mt-16 md:py-14">
                 {/* Wider than a phone screen so the drift never shows an edge. */}
-                <div className="-mx-[7.5%] w-[115%] md:mx-auto md:w-full md:max-w-[1180px] md:px-4">
+                <div className="-mx-[7.5%] w-[115%] md:mx-auto md:w-full md:max-w-[73.75rem] md:px-4">
                     <motion.img
                         style={{ x }}
                         src={studio.roster}

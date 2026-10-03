@@ -157,6 +157,11 @@
     html {
         scroll-behavior: smooth;
         background: var(--theme-page);
+        /* Fluid root size. Everything sized in rem (type, spacing, the shell)
+           grows with it, so wide screens get a proportionally larger layout
+           instead of a narrow column: 16px up to ~1600px wide, ~21px at 2560,
+           capped at 22px. 100% / 137.5% keep the reader's own font setting. */
+        font-size: clamp(100%, 0.45rem + 0.55vw, 137.5%);
     }
 
     body {
@@ -225,7 +230,7 @@
 
 @layer components {
     .shell {
-        @apply mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-10;
+        @apply mx-auto w-full max-w-[77.5rem] px-4 sm:px-6 lg:px-10;
     }
 
     /* Small accent label above a heading. Used sparingly. */
@@ -236,7 +241,7 @@
     /* Buttons: torn-paper labels, after Gardens Interactive.
        primary = crimson, secondary = the theme's inverse (moon on dark, ink on light). */
     .btn {
-        @apply torn inline-flex items-center justify-center gap-2.5 px-7 pt-3.5 pb-3 font-display text-[15px] font-bold
+        @apply torn inline-flex items-center justify-center gap-2.5 px-7 pt-3.5 pb-3 font-display text-[0.9375rem] font-bold
         tracking-[0.22em] whitespace-nowrap uppercase transition-[background-color,color,transform] duration-300
         ease-(--ease-out-soft) hover:-translate-y-0.5 active:translate-y-0 disabled:cursor-wait disabled:opacity-60;
     }

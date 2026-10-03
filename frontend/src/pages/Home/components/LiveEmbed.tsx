@@ -50,7 +50,7 @@ export default function LiveEmbed() {
                         type="button"
                         onClick={() => setPlatform(p)}
                         aria-pressed={p === platform}
-                        className={`flex items-center gap-2 px-4 py-2 font-display text-sm font-bold tracking-[0.2em] uppercase transition-colors ${
+                        className={`flex min-h-11 items-center gap-2 px-4 py-2 font-display text-sm font-bold tracking-[0.2em] uppercase transition-colors ${
                             p === platform ? "bg-inverse text-inverse-ink" : "text-muted hover:text-ink"
                         }`}
                     >
@@ -93,7 +93,7 @@ export default function LiveEmbed() {
             {current.watch && (
                 <ExternalLink
                     href={current.watch}
-                    className="mt-3 inline-flex items-center gap-2 font-display text-sm font-bold tracking-[0.2em] text-muted uppercase transition-colors hover:text-ink"
+                    className="mt-1 inline-flex items-center gap-2 py-3 font-display text-sm font-bold tracking-[0.2em] text-muted uppercase transition-colors hover:text-ink"
                 >
                     Open on {current.label} <ArrowUpRight />
                 </ExternalLink>

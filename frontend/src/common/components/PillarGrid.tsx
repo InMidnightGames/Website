@@ -16,11 +16,11 @@ const PLATES = [
  */
 export default function PillarGrid() {
     return (
-        <ul className="mx-auto grid max-w-[980px] gap-16 sm:grid-cols-3 sm:gap-10">
+        <ul className="mx-auto grid max-w-[61.25rem] gap-16 sm:grid-cols-3 sm:gap-10">
             {pillars.map((pillar, i) => (
                 <Reveal as="li" key={pillar.title} delay={i * 120} className={`text-center ${i === 1 ? "sm:mt-14" : ""}`}>
                     <TiltCard
-                        className="mx-auto aspect-square w-full max-w-[270px]"
+                        className="mx-auto aspect-square w-full max-w-[16.875rem]"
                         panelClassName={`bg-moon p-5 ${i === 1 ? "-rotate-1" : "rotate-1"}`}
                         plateClassName={PLATES[i % PLATES.length]}
                         strength={12}

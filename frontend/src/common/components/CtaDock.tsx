@@ -73,12 +73,12 @@ export default function CtaDock() {
                         >
                             <CaretDown />
                         </button>
-                        <ExternalLink href={community.url} className="btn btn-primary w-full px-4 text-[13px]">
+                        <ExternalLink href={community.url} className="btn btn-primary w-full px-4 text-[0.8125rem]">
                             {community.icon}
                             {community.label}
                         </ExternalLink>
                         {support && (
-                            <ExternalLink href={support.url} className="btn btn-moon w-full px-4 text-[13px]">
+                            <ExternalLink href={support.url} className="btn btn-moon w-full px-4 text-[0.8125rem]">
                                 {support.icon}
                                 {support.label}
                             </ExternalLink>

@@ -23,7 +23,7 @@ function Banner() {
 
     return (
         <>
-            <section className="torn-bottom relative isolate flex h-[52vh] min-h-[380px] max-h-[560px] items-center overflow-hidden bg-night text-moon">
+            <section className="torn-bottom relative isolate flex h-[52vh] min-h-[23.75rem] max-h-[35rem] items-center overflow-hidden bg-night text-moon">
                 <img
                     src={banner.image}
                     alt={banner.alt}
@@ -76,7 +76,7 @@ function Openings() {
 
     return (
         <section id="openings" className="scroll-mt-16 bg-surface py-16 md:py-20">
-            <div className="shell max-w-[1040px]">
+            <div className="shell max-w-[65rem]">
                 <SectionTitle eyebrow="A career at In Midnight">
                     Open positions <span className="text-accent">({jobs.length})</span>
                 </SectionTitle>

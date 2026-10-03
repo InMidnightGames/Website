@@ -13,7 +13,7 @@ const PAGE_SIZE = 12;
 /** The newest post as a full-bleed banner, after the Gardens Interactive blog. */
 function Feature({ post }: { post: PostSummary | undefined }) {
     return (
-        <section className="torn-bottom relative isolate flex min-h-[70vh] items-end overflow-hidden bg-night pt-28 pb-20 text-moon md:min-h-[560px]">
+        <section className="torn-bottom relative isolate flex min-h-[70vh] items-end overflow-hidden bg-night pt-28 pb-20 text-moon md:min-h-[35rem]">
             <img
                 src={post?.coverUrl || "/media/hero-banner.webp"}
                 alt=""
