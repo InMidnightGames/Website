@@ -64,7 +64,7 @@ const TeamData: TeamMember[] = [
             "Marketing, communications, and events director at Insomniac Events, Something in Action, Connect, and Cave Bear Games.",
         member_type: "LEAD",
         department: "MARKETING",
-        status: "ACTIVE",
+        status: "INACTIVE",
         pic: pic("sofia"),
         portrait: portrait("sofia"),
     },
