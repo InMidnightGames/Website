@@ -59,7 +59,7 @@ export default function UpdatesSection() {
     return (
         <section id="updates" className="torn-band scroll-mt-16 bg-surface py-24 md:py-28">
             <div className="shell">
-                <SectionTitle align="left">{updates.heading}</SectionTitle>
+                <SectionTitle>{updates.heading}</SectionTitle>
 
                 <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-10">
                     <Reveal className={blog ? "lg:col-span-7" : "lg:col-span-8 lg:col-start-3"}>

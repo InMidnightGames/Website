@@ -27,7 +27,7 @@ const portrait = (name: string) => `/media/team/round/${name}.webp`;
 const TeamData: TeamMember[] = [
     {
         name: "Tanner Liou",
-        title: "Founder, Chief Creative Officer",
+        title: "Founder, Chief Executive Officer",
         highlight:
             "World-class, multi-genre, multi-rank 1 competitive player, esports coach, partnered content creator, AAA consultant, and lead combat designer.",
         member_type: "LEAD",
@@ -71,7 +71,7 @@ const TeamData: TeamMember[] = [
     {
         name: "Tradd Thompson",
         title: "Combat Designer",
-        highlight: "Lead combat designer at Intrepid Studios, Cryptic Studios, and Singularity Studios.",
+        highlight: "Senior combat designer at Intrepid Studios and Cryptic Studios.",
         member_type: "MEMBER",
         department: "DESIGNER",
         status: "ACTIVE",
