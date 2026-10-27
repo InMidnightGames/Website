@@ -24,7 +24,11 @@ export default function JoinUsSection() {
                             Open positions <span className="text-accent">({jobs.length})</span>
                         </h3>
                         <p className="mt-2 text-lg text-muted">
-                            {jobs.length > 0 ? "See the roles and how to apply." : "No open roles right now. Join the Discord to hear when that changes."}
+                            {jobs.length > 0
+                                ? "See the roles and how to apply."
+                                : features.community
+                                  ? "No open roles right now. Join the Discord to hear when that changes."
+                                  : "No open roles right now. Check back soon."}
                         </p>
                         <div className="mt-6 flex flex-wrap justify-center gap-3">
                             {features.pages.careers && (

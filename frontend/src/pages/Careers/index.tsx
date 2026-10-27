@@ -71,6 +71,7 @@ function JobRow({ job }: { job: Job }) {
 }
 
 function Openings() {
+    const { community } = siteConfig.cta;
     const [filters, setFilters] = useState<Record<FilterKey, string>>({ department: "", location: "", type: "" });
     const filtered = jobs.filter((job) => FILTERS.every(({ key }) => !filters[key] || job[key] === filters[key]));
 
@@ -118,11 +119,17 @@ function Openings() {
                         </ul>
                     ) : (
                         <EmptyState title={jobs.length ? "No roles match those filters" : "No open positions right now"}>
-                            <p>{jobs.length ? "Try clearing a filter to see every role." : "Join the Discord to hear when new roles open."}</p>
-                            {jobs.length === 0 && (
-                                <ExternalLink href={siteConfig.cta.community.url} className="btn btn-primary mt-6">
-                                    {siteConfig.cta.community.icon}
-                                    {siteConfig.cta.community.label}
+                            <p>
+                                {jobs.length
+                                    ? "Try clearing a filter to see every role."
+                                    : community
+                                      ? "Join the Discord to hear when new roles open."
+                                      : "Check back soon for new roles."}
+                            </p>
+                            {jobs.length === 0 && community && (
+                                <ExternalLink href={community.url} className="btn btn-primary mt-6">
+                                    {community.icon}
+                                    {community.label}
                                 </ExternalLink>
                             )}
                         </EmptyState>

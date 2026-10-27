@@ -24,7 +24,7 @@ export default function CtaDock() {
     const [open, setOpen] = useState(initialOpen);
     const [footerVisible, setFooterVisible] = useState(false);
     const { community, support } = siteConfig.cta;
-    const socials = siteConfig.socials.filter((s) => s.url && s.url !== community.url && s.url !== support?.url);
+    const socials = siteConfig.socials.filter((s) => s.url && s.url !== community?.url && s.url !== support?.url);
 
     useEffect(() => {
         const footer = document.getElementById("footer");
@@ -73,10 +73,12 @@ export default function CtaDock() {
                         >
                             <CaretDown />
                         </button>
-                        <ExternalLink href={community.url} className="btn btn-primary w-full px-4 text-[0.8125rem]">
-                            {community.icon}
-                            {community.label}
-                        </ExternalLink>
+                        {community && (
+                            <ExternalLink href={community.url} className="btn btn-primary w-full px-4 text-[0.8125rem]">
+                                {community.icon}
+                                {community.label}
+                            </ExternalLink>
+                        )}
                         {support && (
                             <ExternalLink href={support.url} className="btn btn-moon w-full px-4 text-[0.8125rem]">
                                 {support.icon}
@@ -101,14 +103,16 @@ export default function CtaDock() {
                     </div>
                 ) : (
                     <div className="flex flex-col items-center gap-1 p-1.5">
-                        <ExternalLink
-                            href={community.url}
-                            aria-label={community.label}
-                            title={community.label}
-                            className={`${iconButton} bg-ember hover:bg-ember-hover`}
-                        >
-                            {community.icon}
-                        </ExternalLink>
+                        {community && (
+                            <ExternalLink
+                                href={community.url}
+                                aria-label={community.label}
+                                title={community.label}
+                                className={`${iconButton} bg-ember hover:bg-ember-hover`}
+                            >
+                                {community.icon}
+                            </ExternalLink>
+                        )}
                         {support && (
                             <ExternalLink
                                 href={support.url}

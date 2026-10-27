@@ -53,10 +53,12 @@ export default function HeroSection() {
                     <p className="mt-3 mb-5 animate-fade-up text-xl leading-snug text-moon/90 [animation-delay:150ms] md:text-2xl">
                         {hero.mission}
                     </p>
-                    <ExternalLink href={community.url} className="btn btn-primary">
-                        {community.icon}
-                        {community.label}
-                    </ExternalLink>
+                    {community && (
+                        <ExternalLink href={community.url} className="btn btn-primary">
+                            {community.icon}
+                            {community.label}
+                        </ExternalLink>
+                    )}
                     {support && (
                         <ExternalLink href={support.url} className="btn btn-moon">
                             {support.icon}

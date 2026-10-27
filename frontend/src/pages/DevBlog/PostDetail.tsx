@@ -86,13 +86,15 @@ export default function PostDetailPage() {
                         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(post.body) }}
                     />
 
-                    <div className="mt-16 flex flex-col items-start gap-5 border-t border-line pt-10 sm:flex-row sm:items-center sm:justify-between">
-                        <p className="text-lg text-muted">Talk about this post with the team and other players.</p>
-                        <ExternalLink href={siteConfig.cta.community.url} className="btn btn-primary">
-                            {siteConfig.cta.community.icon}
-                            {siteConfig.cta.community.label}
-                        </ExternalLink>
-                    </div>
+                    {siteConfig.cta.community && (
+                        <div className="mt-16 flex flex-col items-start gap-5 border-t border-line pt-10 sm:flex-row sm:items-center sm:justify-between">
+                            <p className="text-lg text-muted">Talk about this post with the team and other players.</p>
+                            <ExternalLink href={siteConfig.cta.community.url} className="btn btn-primary">
+                                {siteConfig.cta.community.icon}
+                                {siteConfig.cta.community.label}
+                            </ExternalLink>
+                        </div>
+                    )}
                 </div>
             )}
         </article>

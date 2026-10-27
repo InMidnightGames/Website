@@ -69,6 +69,8 @@ export const features = {
     },
     /** Floating Discord / Patreon / socials dock, bottom right on every page. */
     ctaDock: true,
+    /** Discord: the "Join the community" buttons (hero, dock, careers, dev blog posts) and the Discord social icon. */
+    community: false,
     /** Patreon: the "Support us" buttons (hero + dock) and the Patreon social icon. */
     patreon: false,
     sections: {
@@ -119,16 +121,20 @@ export const siteConfig = {
 
     /** The two calls to action used by the floating dock, hero and footer. */
     cta: {
-        community: { label: "Join the community", url: links.discord, icon: <DiscordLogo weight="fill" /> },
+        /** null while features.community is off. */
+        community: features.community
+            ? { label: "Join the community", url: links.discord, icon: <DiscordLogo weight="fill" /> }
+            : null,
         /** null while features.patreon is off. */
         support: features.patreon
             ? { label: "Support us", url: links.patreon, icon: <PatreonLogo weight="fill" /> }
             : null,
     },
 
-    /** Footer + dock socials. Entries with an empty url are hidden (Patreon's too while features.patreon is off). */
+    /** Footer + dock socials. Entries with an empty url are hidden (Discord's and Patreon's too while
+        features.community / features.patreon are off). */
     socials: [
-        { label: "Discord", url: links.discord, icon: <DiscordLogo weight="fill" /> },
+        { label: "Discord", url: features.community ? links.discord : "", icon: <DiscordLogo weight="fill" /> },
         { label: "YouTube", url: links.youtube, icon: <YoutubeLogo weight="fill" /> },
         { label: "X", url: links.x, icon: <XLogo weight="bold" /> },
         { label: "TikTok", url: links.tiktok, icon: <TiktokLogo weight="fill" /> },
