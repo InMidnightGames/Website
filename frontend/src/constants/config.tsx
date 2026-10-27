@@ -173,7 +173,7 @@ export const pagesConfig = {
             imageSmall: "/media/hero-banner-sm.webp",
             alt: "A gothic castle on a hill under a full moon",
             mission:
-                "We build competitive games that are approachable, difficult to master, and deep enough to reward study, execution and teamwork.",
+                "Building the future of competitive multiplayer.",
         },
 
         newsletter: {
