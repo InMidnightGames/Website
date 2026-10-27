@@ -21,8 +21,8 @@ export type TeamMember = {
     portrait: string;
 };
 
-const pic = (name: string) => `/media/team/${name}.webp`;
-const portrait = (name: string) => `/media/team/round/${name}.webp`;
+const pic = (name: string, ext:string ="webp") => `/media/team/${name}.${ext}`;
+const portrait = (name: string, ext:string ="webp") => `/media/team/round/${name}.${ext}`;
 
 const TeamData: TeamMember[] = [
     {
@@ -54,8 +54,8 @@ const TeamData: TeamMember[] = [
         member_type: "LEAD",
         department: "OPERATIONS",
         status: "ACTIVE",
-        pic: pic("ayla"),
-        portrait: portrait("ayla"),
+        pic: pic("ayla-portrait-square", "png"),
+        portrait: portrait("Ayla_Clear_PFP_BW", "png"),
     },
     {
         name: "Sofia Ayad",
