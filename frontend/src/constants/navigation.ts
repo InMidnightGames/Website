@@ -14,8 +14,8 @@ const pages = features.pages;
 export const navItems: NavItem[] = (
     [
         [{ label: "Studio", to: "/#studio", section: true }, home.studio],
-        [{ label: "Project", to: "/#project", section: true }, home.project],
         [{ label: "Team", to: "/#team", section: true }, home.team],
+        [{ label: "Project", to: "/#project", section: true }, home.project],
         [{ label: "Careers", to: "/careers" }, pages.careers],
         [{ label: "Dev Blog", to: "/devblog" }, pages.devblog],
         [{ label: "Newsletter", to: "/#newsletter", section: true }, home.newsletter],
