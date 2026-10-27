@@ -25,17 +25,14 @@ export default function ProjectSection() {
 
                     <Reveal delay={100} className="mt-6 space-y-4 text-xl leading-relaxed text-muted">
                         <p>
-                            <Mark>Project CORE</Mark> is a third-person <Mark>5v5 MOBA</Mark> and the first playable part of a
-                            new dark fantasy IP. In place of creep waves and turret lanes, teams fight to capture territory
-                            and claim a path toward the enemy base.
+                            {/*<Mark>Project CORE</Mark> is a third-person <Mark>5v5 MOBA</Mark> and the first playable part of a*/}
+                            A non-isometric, third-person <Mark>MOBA</Mark> and the first playable part of a new dark fantasy IP.
                         </p>
                         <p>
-                            Players command legendary <Mark>champions</Mark> drawn from <Mark>worlds colliding</Mark>, while
-                            contestable events emerge across the battlefield.
+                            <Mark>Command legendary champions </Mark> drawn from worlds colliding in a fresh take on the MOBA genre.
                         </p>
                         <p>
-                            In production for <Mark>PC</Mark> in Unreal Engine, CORE is built around decisive skill
-                            expression and one conviction: no battle is over while players still have the will to turn it.
+                            "Our world remembers those who <Mark>stand defiant </Mark> in the face of impossible odds."
                         </p>
                     </Reveal>
                 </div>

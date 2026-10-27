@@ -50,7 +50,7 @@
 @theme {
     --font-display: "Caslon Antique", "Times New Roman", serif;
     --font-sans: "Caslon Antique", "Times New Roman", serif;
-
+    --debug-bordered: "border-amber-300 border-1";
     --color-night: #08070e;
     --color-moon: #f3ece0;
     --color-blood: #eb4335;

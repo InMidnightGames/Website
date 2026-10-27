@@ -40,7 +40,7 @@ const TeamData: TeamMember[] = [
         name: "Excell Pepple",
         title: "Chief Technology Officer",
         highlight:
-            "Software engineer and technical game designer specialized in server architecture and cloud infrastructure at Amazon Web Services & Amazon Games for New World: Aeternum.",
+            "Software engineer and technical game designer specialized in server architecture and cloud infrastructure at Amazon Games for New World: Aeternum.",
         member_type: "LEAD",
         department: "TECH",
         status: "ACTIVE",
@@ -70,7 +70,7 @@ const TeamData: TeamMember[] = [
     },
     {
         name: "Tradd Thompson",
-        title: "Combat Designer",
+        title: "Senior Combat Designer",
         highlight: "Senior combat designer at Intrepid Studios and Cryptic Studios.",
         member_type: "MEMBER",
         department: "DESIGNER",

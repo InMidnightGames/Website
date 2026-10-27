@@ -141,21 +141,21 @@ export const siteConfig = {
 /** Studio pillars, shown on the home page (Join us) and the careers page. */
 export const pillars: Pillar[] = [
     {
-        title: "Remote first",
-        blurb: "A distributed team across time zones, hired for craft rather than a commute.",
-        image: "/media/pillar-remote.webp",
+        title: "Player First",
+        blurb: "Accessible to newcomers, with the depth to reward tens of thousands of hours of dedicated play. \nWe create games that are worth your time and attention.",
+        image: "/media/pillar-skill.webp",
         alt: "Silhouette of a wandering swordsman in a wide-brimmed hat",
     },
     {
-        title: "Gameplay first",
-        blurb: "Mechanics lead every decision. Numbers support good design, they never stand in for it.",
+        title: "Built Together",
+        blurb: "Open development, frequent communication, and livestreams keep us connected with our community. \nWe believe in sharing our progress and honoring the support of the players who make our work possible.",
         image: "/media/pillar-gameplay.webp",
         alt: "Silhouette of a beast-like warrior lunging forward",
     },
     {
-        title: "Skill expression",
-        blurb: "Many ways to outplay an opponent, so no match is decided before the final fight.",
-        image: "/media/pillar-skill.webp",
+        title: "Enduring Stewardship",
+        blurb: "We take the long view, making decisions that we believe will create the best experience for our players and our team throughout development and beyond.",
+        image: "/media/pillar-remote.webp",
         alt: "Silhouette of a spear fighter mid-strike",
     },
 ];
@@ -164,7 +164,16 @@ export const pillars: Pillar[] = [
     Example entry:
     { id: "gameplay-engineer", title: "Gameplay Engineer", department: "Engineering",
       location: "Remote", type: "Contract", url: "mailto:jobs@example.com" } */
-export const jobs: Job[] = [];
+export const jobs: Job[] = [
+    // {
+    //     id: "cm1",
+    //     title: "Community Manager",
+    //     department: "Marketing",
+    //     location: "Remote",
+    //     type: "Contract",
+    //     url: "https://docs.google.com/forms/d/1stmfrkofXeH5dPor5Z1w_n6QVAcFrObgaRyBqCJj_PU"
+    // }
+];
 
 export const pagesConfig = {
     home: {
@@ -185,7 +194,7 @@ export const pagesConfig = {
 
         studio: {
             statement:
-                "We are an independent game studio creating competitive multiplayer games built around deep combat and long-term player mastery.",
+                "We are an independent studio creating a game built around deep, skill-expressive gameplay and long-term mastery.",
             roster: "/media/roster.webp",
             rosterAlt: "The Project CORE champion line-up in silhouette",
         },
