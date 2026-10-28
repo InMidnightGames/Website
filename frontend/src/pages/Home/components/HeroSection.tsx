@@ -48,7 +48,7 @@ export default function HeroSection() {
                         alt=""
                         width={900}
                         height={900}
-                        className="-my-13 w-[min(23.75rem,74vw)] animate-fade-up drop-shadow-[0_10px_30px_rgb(0_0_0/0.55)]"
+                        className="-my-13 w-[min(23.75rem,20vw)] animate-fade-up drop-shadow-[0_10px_30px_rgb(0_0_0/0.55)]"
                     />
                     <p className="mt-3 mb-5 animate-fade-up text-xl leading-snug text-moon/90 [animation-delay:150ms] md:text-2xl">
                         {hero.mission}

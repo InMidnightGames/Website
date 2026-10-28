@@ -100,7 +100,7 @@ export const siteConfig = {
         visitor's OS setting). Artwork sections stay dark in every theme. */
     theme: "system" as Theme,
 
-    logo: "/media/logo.webp",
+    logo: "/media/img_logo.png",
     /** Emblem + wordmark with light text, shown in the solid nav bar. */
     logoWide: "/media/logo-wide.webp",
     emblem: "/media/logo-emblem.webp",

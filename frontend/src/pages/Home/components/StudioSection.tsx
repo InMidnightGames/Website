@@ -19,7 +19,7 @@ export default function StudioSection() {
         <section id="studio" className="scroll-mt-16 pt-15 pb-6 md:pt-15 md:pb-8 ">
             <div className="shell" >
                 <SectionTitle align="left">Our studio</SectionTitle>
-                <Reveal as="p" delay={100} className="mt-5 max-w-3xl font-display text-2xl leading-snug text-ink  md:text-light md:leading-tight">
+                <Reveal as="p" delay={100} className="mt-5 max-w-5xl font-display text-2xl leading-snug text-ink  md:text-light md:leading-tight">
                     {studio.statement}
                 </Reveal>
             </div>
